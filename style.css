@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #303841;
+}
+
+body {
+  font-family: 'Iceland', cursive;
+  background-color: var(--primary-color);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#layar {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 15vh;
+  border-radius: 10px;
+  background: #303841;
+  box-shadow: 6px 6px 12px #293037,
+    -6px -6px 12px #37404b;
+  outline: none;
+  border: none;
+  font-size: 2vw;
+  text-align: right;
+  color: #fdfdfd;
+  padding: 0 1vw;
+  cursor: pointer;
+}
+
+.kalkulator {
+  width: 25vw;
+  height: auto;
+  padding: 4vw 3vw 3vw 3vw;
+  border-radius: 15px;
+  background: #303841;
+  box-shadow: 5px 5px 10px #293037,
+    -5px -5px 10px #37404b;
+}
+
+.container-button {
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1vw;
+  align-content: space-around;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.button {
+  width: 4vw;
+  height: 4vw;
+  background-color: #fdfdfd;
+  color: #7B91BB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6vw;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* WHITE BUTTON */
+
+.button::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13%;
+  width: 2.8vw;
+  height: 2.8vw;
+  position: absolute;
+  background: #fdfdfd;
+  box-shadow: 3px 3px 5px #d7d7d7,
+    -3px -3px 5px #ffffff;
+}
+
+.button:hover::before {
+  background: linear-gradient(145deg, #e4e4e4, #ffffff);
+  box-shadow: 3px 3px 5px #d7d7d7,
+    -3px -3px 5px #ffffff;
+}
+
+.button:active::before {
+  background: #fdfdfd;
+  box-shadow: inset 3px 3px 5px #d7d7d7,
+    inset -3px -3px 5px #ffffff;
+}
+
+.flex-container:nth-child(2) .button:nth-child(1)::before {
+  content: "7";
+}
+
+.flex-container:nth-child(2) .button:nth-child(2)::before {
+  content: "8";
+}
+
+.flex-container:nth-child(2) .button:nth-child(3)::before {
+  content: "9";
+}
+
+.flex-container:nth-child(3) .button:nth-child(1)::before {
+  content: "4";
+}
+
+.flex-container:nth-child(3) .button:nth-child(2)::before {
+  content: "5";
+}
+
+.flex-container:nth-child(3) .button:nth-child(3)::before {
+  content: "6";
+}
+
+.flex-container:nth-child(4) .button:nth-child(1)::before {
+  content: "1";
+}
+
+.flex-container:nth-child(4) .button:nth-child(2)::before {
+  content: "2";
+}
+
+.flex-container:nth-child(4) .button:nth-child(3)::before {
+  content: "3";
+}
+
+.flex-container:nth-child(5) .button:nth-child(1)::before {
+  content: "0";
+}
+
+.flex-container:nth-child(5) .button:nth-child(2)::before {
+  content: "00";
+}
+
+.flex-container:nth-child(5) .button:nth-child(3)::before {
+  content: "000";
+}
+
+/* BUTTON BLUE  */
+
+.blue {
+  background-color: #448EF6;
+  color: #fdfdfd;
+}
+
+.blue:nth-child(2)::before, .blue:nth-child(3)::before {
+  content: "<";
+  background: #448EF6;
+  box-shadow: 3px 3px 5px #3a79d1,
+    -3px -3px 5px #4ea3ff;
+}
+
+.blue:hover::before {
+  background: linear-gradient(145deg, #3d80dd, #4998ff);
+  box-shadow: 3px 3px 5px #3a79d1,
+    -3px -3px 5px #4ea3ff;
+}
+
+.blue:active::before {
+  background: #448EF6;
+  box-shadow: inset 3px 3px 5px #3a79d1,
+    inset -3px -3px 5px #4ea3ff;
+}
+
+.blue:nth-child(3)::before {
+  content: ".";
+}
+
+/* BUTTON GREEN */
+
+.aritmatika {
+  background-color: #38817A;
+  color: #fdfdfd;
+  border-radius: 50%;
+}
+
+.aritmatika::before {
+  background: #38817A;
+  box-shadow: 3px 3px 5px #306e68,
+    -3px -3px 5px #40948c;
+  border-radius: 50%;
+}
+
+.aritmatika:hover::before {
+  background: linear-gradient(145deg, #32746e, #3c8a83);
+  box-shadow: 3px 3px 5px #306e68,
+    -3px -3px 5px #40948c;
+}
+
+.aritmatika:active::before {
+  background: #38817A;
+  box-shadow: inset 3px 3px 5px #306e68,
+    inset -3px -3px 5px #40948c;
+}
+
+.flex-container:nth-child(1) .aritmatika::before {
+  content: "/";
+}
+
+.flex-container:nth-child(2) .aritmatika::before {
+  content: "X";
+}
+
+.flex-container:nth-child(3) .aritmatika::before {
+  content: "+";
+}
+
+.flex-container:nth-child(4) .aritmatika::before {
+  content: "-";
+}
+
+/* YELLOW BUTTON */
+
+#hitung {
+  background-color: #FDDA16;
+  border-radius: 50%;
+  color: #fdfdfd;
+}
+
+#hitung::before {
+  content: "=";
+  background: #FDDA16;
+  box-shadow: 3px 3px 5px #d7b913,
+    -3px -3px 5px #fffb19;
+  border-radius: 50%;
+}
+
+#hitung:hover::before {
+  background: linear-gradient(145deg, #e4c414, #ffe918);
+  box-shadow: 3px 3px 5px #d7b913,
+    -3px -3px 5px #fffb19;
+}
+
+#hitung:active::before {
+  background: #FDDA16;
+  box-shadow: inset 3px 3px 5px #d7b913,
+    inset -3px -3px 5px #fffb19;
+}
+
+
+/* BUTTON RED */
+
+.clear {
+  color: #fdfdfd;
+  background-color: #EE2B47;
+}
+
+.clear::before {
+  content: "C";
+  background: #EE2B47;
+  box-shadow: 3px 3px 5px #ca253c,
+    -3px -3px 5px #ff3152;
+}
+
+.clear:hover::before {
+  background: linear-gradient(145deg, #d62740, #ff2e4c);
+  box-shadow: 3px 3px 5px #ca253c,
+    -3px -3px 5px #ff3152;
+}
+
+.clear:active::before {
+  background: #EE2B47;
+  box-shadow: inset 3px 3px 5px #ca253c,
+    inset -3px -3px 5px #ff3152;
+}
+
+@media (max-width: 992px) {
+
+  .kalkulator {
+    width: 55vw;
+    height: auto;
+    padding: 5vw;
+  }
+
+  #layar {
+    width: 100%;
+    height: 15vh;
+    font-size: 5vw;
+    text-align: right;
+    padding: 0 3vw;
+  }
+
+  .container-button {
+    margin-top: 5vw;
+    gap: 3vw;
+  }
+
+  .button {
+    width: 9vw;
+    height: 9vw;
+    font-size: 4vw;
+  }
+
+  /* WHITE BUTTON */
+
+  .button::before {
+    content: "";
+    border-radius: 13%;
+    width: 6vw;
+    height: 6vw;
+  }
+
+  /* BUTTON BLUE  */
+
+  .blue:nth-child(2)::before, .blue:nth-child(3)::before {
+    content: "<";
+  }
+
+  .blue:nth-child(3)::before {
+    content: ".";
+  }
+
+  /* BUTTON GREEN */
+
+  .aritmatika {
+    border-radius: 50%;
+  }
+
+  .aritmatika::before {
+    border-radius: 50%;
+  }
+
+  /* YELLOW BUTTON */
+
+  #hitung {
+    border-radius: 50%;
+  }
+
+  #hitung::before {
+    border-radius: 50%;
+  }
+
+  /* BUTTON RED */
+  .clear::before {
+    content: "C";
+    background: #EE2B47;
+    box-shadow: 3px 3px 5px #ca253c,
+      -3px -3px 5px #ff3152;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  body {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .kalkulator {
+    width: 100vw;
+    height: 100vh;
+    padding: 5vh 5vw 0 5vw;
+    border-radius: 0;
+  }
+
+  #layar {
+    width: 100%;
+    height: 20vh;
+    background: #303841;
+    box-shadow: 6px 6px 12px #293037,
+      -6px -6px 12px #37404b;
+    font-size: 10vw;
+    padding: 0 4vw;
+  }
+
+  .container-button {
+    margin-top: 10vw;
+    gap: 4vw;
+  }
+
+  .button {
+    width: 18vw;
+    height: 18vw;
+    font-size: 8vw;
+  }
+
+  /* WHITE BUTTON */
+
+  .button::before {
+    content: "";
+    border-radius: 13%;
+    width: 13vw;
+    height: 13vw;
+  }
+
+  .aritmatika::before {
+    border-radius: 50%;
+  }
+
+  .clear::before {
+    content: "C";
+    background: #EE2B47;
+    box-shadow: 3px 3px 5px #ca253c,
+      -3px -3px 5px #ff3152;
+  }
+
+
+}
+
+@media (max-height: 568px) {
+  #layar {
+    font-size: 7vw;
+    height: 15vh;
+  }
+
+  .button {
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .button::before {
+    width: 12vw;
+    height: 12vw;
+  }
+}
